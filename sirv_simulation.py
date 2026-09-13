@@ -48,13 +48,15 @@ for t in range(1, num_steps):
     R_sirv[t] = R_sirv[t-1] + dR * dt
     V_sirv[t] = V_sirv[t-1] + dV * dt
 I_sir_m = I_sir / 1e6
-I_sirv_m = I_sirv / 1e6
 plt.figure(figsize=(10, 6))
-plt.plot(t_values, I_sir_m, label="Infected (SIR)", color='red', linewidth=2)
-plt.plot(t_values, I_sirv_m, label="Infected (SIRV)", color='purple', linewidth=2, linestyle='--')
-plt.title("Comparison of Infected Population: SIR vs SIRV", fontsize=14)
-plt.xlabel("Time(days)", fontsize=12)
-plt.ylabel("Infected Individuals (Millions)", fontsize=12)
+plt.plot(t_values, S_sirv / 1e6, label="Susceptible (S)", color='blue', linewidth=2)
+plt.plot(t_values, I_sirv / 1e6, label="Infected (I)", color='red', linewidth=2)
+plt.plot(t_values, R_sirv / 1e6, label="Recovered (R)", color='green', linewidth=2)
+plt.plot(t_values, V_sirv / 1e6, label="Vaccinated (V)", color='purple', linewidth=2)
+plt.title("SIRV Model Simulation from December 15, 2021 to March 16, 2022", fontsize=14)
+plt.xlabel("Time(Days)", fontsize=12)
+plt.ylabel("Number of individuals (Millions)", fontsize=12)
 plt.legend()
 plt.grid(True)
+plt.savefig('sirv_simulation.png', dpi=150, bbox_inches='tight')
 plt.show()
