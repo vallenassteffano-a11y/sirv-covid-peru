@@ -1,4 +1,4 @@
-Import numpy as np
+import numpy as np
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
 x_data = np.array([0, 2, 5, 7, 10, 12, 15, 17, 20, 23, 25, 28, 30, 33, 35,
