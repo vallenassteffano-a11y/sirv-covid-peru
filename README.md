@@ -13,7 +13,7 @@ Fitted parameters: β = 0.951, γ = 0.231
 |                          | SIR (no vaccination) | SIRV (with vaccination) |
 | ------------------------ | -------------------- | ----------------------- |
 | Peak active cases        | 1,065,611            | 459,925                 |
-| Total infections, 90 days| 8,302,462            | 4,460,496               |
+| Total infections, 90 days| 8,302,462            | 4,460,496                |
 
 Vaccination averted an estimated **3,841,966 infections (46.3% reduction)** and
 lowered the peak by **605,686** cases.
@@ -27,7 +27,7 @@ lowered the peak by **605,686** cases.
 - `fit_parameters.py` — fits transmission (β) and recovery (γ) rates to the 37 real
   active-case observations using least-squares minimisation with SciPy's L-BFGS-B optimizer
 - `sirv_simulation.py` — solves the four-compartment SIRV system via Euler's method (Δt = 0.1, 900 steps)
-- `sir_vs_sirv.py` — runs both models on the same fitted parameters 
+- `sir_vs_sirv.py` — runs both models on the same fitted parameters
 
 Requires `numpy`, `scipy`, `matplotlib`.
 
@@ -35,6 +35,8 @@ Requires `numpy`, `scipy`, `matplotlib`.
 
 - `active_cases_peru.csv` — 37 active-case observations (Worldometer)
 - `vaccinations_peru.csv` — 91 days of daily second-dose administrations (Peruvian Ministry of Health)
+- `vaccination_fit.png` — Excel trendline used to derive the degree-5 polynomial v(t)
+  fed into the simulation as the vaccination rate
 
 Initial conditions come from Peru's National Institute of Statistics (N = 33,350,300),
 Worldometer case counts, and reported Pfizer/Sinopharm efficacy rates.
@@ -49,4 +51,8 @@ figure above.
 ## Notes
 
 The optimizer setup was adapted from a Stack Overflow discussion on least-squares
-SIR fitting; the Euler implementation follows a Plus Maths article.
+SIR fitting; the Euler implementation follows a Plus Maths article. The vaccination
+rate function v(t) used in `fit_parameters.py` and `sirv_simulation.py` is a
+degree-5 polynomial trendline fitted in Excel to `vaccinations_peru.csv`
+(see `vaccination_fit.png`); its coefficients were copied in by hand rather than
+computed at runtime.
