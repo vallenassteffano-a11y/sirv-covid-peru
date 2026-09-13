@@ -27,7 +27,7 @@ lowered the peak by **605,686** cases.
 - `fit_parameters.py` — fits transmission (β) and recovery (γ) rates to the 37 real
   active-case observations using least-squares minimisation with SciPy's L-BFGS-B optimizer
 - `sirv_simulation.py` — solves the four-compartment SIRV system via Euler's method (Δt = 0.1, 900 steps)
-- `sir_vs_sirv.py` — runs both models on the same fitted parameters and reports the difference
+- `sir_vs_sirv.py` — runs both models on the same fitted parameters 
 
 Requires `numpy`, `scipy`, `matplotlib`.
 
