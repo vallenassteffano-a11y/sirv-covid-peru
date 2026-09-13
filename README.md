@@ -1,8 +1,6 @@
 # SIRV model of COVID-19 vaccination impact in Peru
 
-> **Note:** The Extended Essay this repository is based on was researched and
-> written independently by the author, with no use of Claude AI or any other AI
-> tool. This README's summary of the essay's methodology and results was drafted
+> **Note:** This README's summary of the essay's methodology and results was drafted
 > with the help of Claude AI, for clarity and to avoid publishing the full essay
 > text. The essay PDF itself is not included in this repository.
 
