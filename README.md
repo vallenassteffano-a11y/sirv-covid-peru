@@ -1,5 +1,10 @@
 # SIRV model of COVID-19 vaccination impact in Peru
 
+> **Note:** This README was drafted with the help of Claude AI, based on the
+> author's IB Mathematics Extended Essay. The full essay itself is not published
+> in this repository; only the code, data, and a summary of methodology and
+> results are shared here.
+
 Extends the standard SIR epidemiological model with a vaccinated compartment (V)
 to estimate how much Peru's vaccination programme reduced infections during the
 third wave, 15 December 2021 – 16 March 2022.
