@@ -1,8 +1,7 @@
-import as np
+import numpy as np
 import matplotlib.pyplot as plt
 def v(t):
-return -0.00115 * t**5 + 0.24004 * t**4 - 17.88265 * t**3 + 602.54558 * t**2 -
-10052.19822 * t + 120899.04357
+return -0.00115 * t**5 + 0.24004 * t**4 - 17.88265 * t**3 + 602.54558 * t**2 - 10052.19822 * t + 120899.04357
 beta = 0.951
 gamma = 0.231
 veff = 0.95
