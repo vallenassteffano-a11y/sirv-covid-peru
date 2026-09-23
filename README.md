@@ -8,8 +8,7 @@
 > The essay PDF itself is not included in this repository.
 
 Extends the standard SIR epidemiological model with a vaccinated compartment (V)
-to estimate how much Peru's vaccination programme reduced infections during the
-third wave, 15 December 2021 – 16 March 2022.
+to estimate how much second-dose vaccination during the third wave (15 December 2021 – 16 March 2022) reduced infections.
 
 Written for an IB Mathematics Extended Essay (2025).
 
